@@ -2,6 +2,7 @@ package Lesson_3;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListInt {
@@ -12,7 +13,16 @@ public class ListInt {
         lst.add(5);
         lst.add(20);
         lst.add(11);
+        Iterator<Integer> iterator = lst.iterator();
+        while (iterator.hasNext()) {
+            int cur = iterator.next();
+            if (cur % 2 == 0) {
+                iterator.remove();
+            }
+        }
+
         System.out.println(lst);
+
         System.out.println(Collections.max(lst));
         System.out.println(Collections.min(lst));
         lst.removeAll(lst);
