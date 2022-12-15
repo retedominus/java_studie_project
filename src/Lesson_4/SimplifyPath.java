@@ -13,22 +13,22 @@ public class SimplifyPath {
         path = path.replaceAll("/+", "/");
         String[] fullPath = path.split("/");
         for (String dir : fullPath) {
-            if (dir.equals("")) {
-                continue;
+            if ("..".equals(dir)) {
+                if (!deque.isEmpty()) {
+                    deque.pollLast();
+                }
+            } else if (!"".equals(dir) && !".".equals(dir)) {
+                deque.addLast(dir);
             }
-            if (dir.equals(".")) {
-                continue;
-            }
-            if (fullPath.length > 1 && dir.equals("..")) {
-                deque.pollFirst();
-            } else deque.push(dir);
+        }
+        if (deque.isEmpty()) {
+            return "/";
         }
         while (!deque.isEmpty()) {
-            sb.append("/");
-            sb.append(deque.pollLast());
+            sb.append("/").append(deque.pollFirst());
         }
-        path = sb.toString();
-        return path.isEmpty() ? "/" : path;
+
+        return sb.toString();
     }
 
 
