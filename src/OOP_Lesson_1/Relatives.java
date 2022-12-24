@@ -2,6 +2,7 @@ package OOP_Lesson_1;
 
 import java.util.Map;
 
+
 public class Relatives implements GenTree{
     static String son;
     static String daughter;

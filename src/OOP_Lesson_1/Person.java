@@ -1,10 +1,5 @@
 package OOP_Lesson_1;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class Person implements PersonsDataBase{
