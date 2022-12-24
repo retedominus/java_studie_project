@@ -1,19 +1,38 @@
 package OOP_Lesson_1;
 
-public class Relatives {
+import java.util.Map;
+
+public class Relatives implements GenTree{
     static String son;
     static String daughter;
     static String father;
     static String mother;
 
     static {
-        son = "сын";
-        daughter = "дочь";
-        father = "отец";
-        mother = "мать";
+        son = "является сыном";
+        daughter = "является дочерью";
+        father = "является отцом";
+        mother = "является матерью";
     }
 
-    public void relate(int firstId, int secondId, String relationType) {
+    @Override
+    public Map<String, String> setRelation(Map<String, String> genTree) {
+    return null;
+    }
 
+    public static String getSon() {
+        return son;
+    }
+
+    public static String getDaughter() {
+        return daughter;
+    }
+
+    public static String getFather() {
+        return father;
+    }
+
+    public static String getMother() {
+        return mother;
     }
 }

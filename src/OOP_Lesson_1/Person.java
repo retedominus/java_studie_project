@@ -1,6 +1,13 @@
 package OOP_Lesson_1;
 
-public class Person {
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Person implements PersonsDataBase{
     protected String firstName;
     protected String lastName;
 
@@ -14,6 +21,7 @@ public class Person {
     protected Integer motherId;
     protected Integer sonId;
     protected Integer daughterId;
+    protected Integer spouseId;
 
     static {
         personId = 0;
@@ -38,6 +46,10 @@ public class Person {
     public Person() {
 
     }
+
+//    public String parentToString(Integer parentId) {
+//        return
+//    }
 
     @Override
     public String toString() {
@@ -69,6 +81,10 @@ public class Person {
         return personId;
     }
 
+    public Integer getSpouseId() {
+        return spouseId;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -83,6 +99,10 @@ public class Person {
 
     public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
+    }
+
+    public void setSpouseId(Integer spouseId) {
+        this.spouseId = spouseId;
     }
 
     public String getEyeColor() {
@@ -139,6 +159,12 @@ public class Person {
 
     public void setDaughterId(Integer daughterId) {
         this.daughterId = daughterId;
+    }
+
+
+    @Override
+    public void saveData() throws IOException {
+
     }
 }
 
