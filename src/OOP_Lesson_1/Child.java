@@ -8,7 +8,6 @@ public class Child extends Person{
         this.parentId = parentId;
     }
 
-
     @Override
     public String toString() {
         return firstName + " " + lastName + " " + Relatives.getDaughter() + " " + parentId;

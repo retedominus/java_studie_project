@@ -2,6 +2,7 @@ package OOP_Lesson_1;
 
 import java.io.IOException;
 
+
 public class Person implements PersonsDataBase{
     protected String firstName;
     protected String lastName;
