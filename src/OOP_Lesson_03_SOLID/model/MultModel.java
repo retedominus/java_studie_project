@@ -2,21 +2,14 @@ package OOP_Lesson_03_SOLID.model;
 
 
 public class MultModel extends CalcModel {
-    public MultModel() {
+    public MultModel(double value1, double value2) {
+        super.x = value1;
+        super.y = value2;
     }
 
     @Override
-    public int result() {
+    public Number result() {
         return x * y;
     }
 
-    @Override
-    public void setX(int value) {
-        super.x = value;
-    }
-
-    @Override
-    public void setY(int value) {
-        super.y = value;
-    }
 }

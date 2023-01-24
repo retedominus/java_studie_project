@@ -1,9 +1,7 @@
 package OOP_Lesson_03_SOLID.model;
 
 public interface BasicFunc {
-    int result();
+    Number result();
 
-    void setX(int value);
 
-    void setY(int value);
 }
