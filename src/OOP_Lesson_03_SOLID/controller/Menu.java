@@ -41,7 +41,7 @@ public class Menu {
 
     static double getValue() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите реальное число:");
+        System.out.println("Введите рациональное число:");
         double value;
         if (in.hasNextDouble()) {
             value = in.nextDouble();
@@ -69,7 +69,7 @@ public class Menu {
     }
 
     public void buttonClick() {
-        view.showTitle("\nДобро пожаловать в калькулятор.\nЯ могу выполнять операции с реальными числами.\n");
+        view.showTitle("\nДобро пожаловать в калькулятор.\nЯ могу выполнять операции с рациональными числами.\n");
         while (true) {
             view.showResult(calc());
         }
