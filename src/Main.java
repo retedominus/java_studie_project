@@ -23,7 +23,7 @@ public class Main {
         return sb.reverse().toString();
     }
 
-    public String mergeAlternately(String word1, String word2) {
+    public String mergeAlternatively(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
 
         int i = 0;
@@ -43,4 +43,7 @@ public class Main {
         return sb.toString();
     }
 
+
+
 }
+
